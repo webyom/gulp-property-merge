@@ -8,7 +8,6 @@ gulp.task 'compile', ->
 
 gulp.task 'example', ->
 	propertyMerge = require './lib/index'
-	through = require 'through2'
 	gulp.src('example/src/**/*.html')
 		.pipe propertyMerge
 			properties:
