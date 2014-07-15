@@ -25,7 +25,7 @@ module.exports = (opt = {}) ->
 	through.obj (file, enc, next) ->
 		return @emit 'error', new gutil.PluginError('gulp-property-merge', 'File can\'t be null') if file.isNull()
 		return @emit 'error', new gutil.PluginError('gulp-property-merge', 'Streams not supported') if file.isStream()
-		content = replaceProperties file.contents.toString('utf-8'), opt, file._lang_
+		content = replaceProperties file.contents.toString(), opt, file._lang_
 		file.contents = new Buffer content
 		@push file
 		next()
