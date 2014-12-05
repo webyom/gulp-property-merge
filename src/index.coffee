@@ -17,7 +17,10 @@ replaceProperties = (content, opt, _lang_) ->
 	gt = opt.gt || '}}%'
 	content = content.replace new RegExp(lt + '([\\w\\-\\.]+)' + gt, 'g'), (full, propName) ->
 		res = getProperty propName, properties
-		if typeof res is 'string' then res else full
+		if typeof res is 'string'
+			res
+		else
+			JSON.stringify res
 	delete properties._lang_
 	content
 
