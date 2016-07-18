@@ -10,4 +10,4 @@ gulp.task 'example', ->
 					name: 'Gary'
 		.pipe gulp.dest('example/dest')
 
-gulp.task 'default', ['compile']
+gulp.task 'default', ['example']
