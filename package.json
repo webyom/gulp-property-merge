@@ -36,7 +36,7 @@
     "through2": "^0.5.1"
   },
   "devDependencies": {
-    "gulp": "^3.8.5",
+    "gulp": "^4.0.2",
     "coffee-script": "^1.7.1"
   }
 }
